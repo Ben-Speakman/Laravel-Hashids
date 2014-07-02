@@ -1,0 +1,23 @@
+{
+    "name": "alexsoft/laravel-hashids",
+    "description": "Add laravel facade for using hashids/hashids",
+    "keywords": ["laravel", "hashids", "hash", "id", "ids", "youtube", "bitly", "encrypt", "decrypt", "obfuscate"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Plekhanov",
+            "email": "alex@plekhanov.us"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~4.1",
+        "hashids/hashids": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Alexsoft\\LaravelHashids\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
