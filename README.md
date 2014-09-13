@@ -4,7 +4,7 @@
 First install it using Composer. Edit your project's `composer.json` file to require `alexsoft/laravel-hashids`.
 
     "require": {
-        "alexsoft/laravel-hashids": "~1.0.0"
+        "alexsoft/laravel-hashids": "~1.1.0"
     }
 
 Next, update Composer from the Terminal:
