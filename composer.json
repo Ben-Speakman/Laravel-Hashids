@@ -11,13 +11,13 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "~4.1",
+        "illuminate/support": "~5.0",
         "hashids/hashids": "~1.0.0"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Alexsoft\\LaravelHashids\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
