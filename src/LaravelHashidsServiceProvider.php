@@ -10,7 +10,7 @@ class LaravelHashidsServiceProvider extends ServiceProvider {
 	 *
 	 * @var bool
 	 */
-	protected $defer = false;
+	protected $defer = true;
 
 	/**
 	 * Bootstrap the application events.
@@ -29,7 +29,7 @@ class LaravelHashidsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bind('hashids', function($app) {
+		$this->app->bind('Hashids\HashGenerator', function($app) {
 			return new Hashids(
 				$app['config']['app.key'],
 				$app['config']['laravel-hashids::length'],
