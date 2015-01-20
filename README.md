@@ -1,10 +1,18 @@
-# Hashids for Laravel 4
+# Hashids for Laravel
 
 ## Installation
 First install it using Composer. Edit your project's `composer.json` file to require `alexsoft/laravel-hashids`.
 
+### Laravel ~ 5.0
+
     "require": {
-        "alexsoft/laravel-hashids": "~1.1.0"
+        "alexsoft/laravel-hashids": "~2.0.0"
+    }
+    
+### Laravel ~ 4.1
+
+    "require": {
+        "alexsoft/laravel-hashids": "~1.2.0"
     }
 
 Next, update Composer from the Terminal:
