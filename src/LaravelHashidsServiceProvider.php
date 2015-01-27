@@ -36,6 +36,8 @@ class LaravelHashidsServiceProvider extends ServiceProvider {
 				$app['config']['laravel-hashids::alphabet']
 			);
 		});
+		
+		$this->mergeConfigFrom('laravel-hashids', __DIR__.'/config/config.php');
 	}
 
 	/**
