@@ -19,7 +19,9 @@ class LaravelHashidsServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('alexsoft/laravel-hashids');
+		$this->publishes([ 
+			__DIR__.'/config/config.php' => config_path('laravel-hashids.php') 
+		]);
 	}
 
 	/**
@@ -29,15 +31,20 @@ class LaravelHashidsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bind('Hashids\HashGenerator', function($app) {
+		$this->app->bindShared('laravel-hashids', function ($app) {
 			return new Hashids(
 				$app['config']['app.key'],
-				$app['config']['laravel-hashids::length'],
-				$app['config']['laravel-hashids::alphabet']
+				$app['config']['laravel-hashids.length'],
+				$app['config']['laravel-hashids.alphabet']
 			);
 		});
+
+		$this->app->bind('Hashids\HashGenerator', function($app)
+		{
+			return $app['laravel-hashids'];
+		});
 		
-		$this->mergeConfigFrom('laravel-hashids', __DIR__.'/config/config.php');
+		$this->mergeConfigFrom(__DIR__.'/config/config.php', 'laravel-hashids');
 	}
 
 	/**

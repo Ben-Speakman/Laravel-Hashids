@@ -10,7 +10,7 @@ class Hashids extends Facade {
      * @return object
      */
     protected static function getFacadeAccessor() {
-        return 'Hashids\HashGenerator';
+        return 'laravel-hashids';
     }
 
 }
